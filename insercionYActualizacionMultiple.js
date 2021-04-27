@@ -37,10 +37,12 @@ sequelize.sync()
 });
 
 /* Actualiza varios registros*/
-User.update({ edad: 33 }, {
+let ids = [2,3];
+User.update({ edad: 34 }, {
     where: {
-      edad: '32'
+      id: ids
     }
   }).then(() => {
     console.log("Done");
   });
+
